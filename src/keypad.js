@@ -7,7 +7,8 @@ import { KeypadPeer } from "./keypadPeer.js";
 class Keypad extends KeypadPeer {
   constructor(
     keypadParameters = {
-      keypadUrl: "https://www.keypad.website/keypad?",
+      //keypadUrl: "https://www.keypad.website/keypad?",
+      keypadUrl: "https://aryamantaore.github.io/dist/keypad?",
       targetElementId: null,
       visualResponseFeedback: false,
     }
