@@ -19,6 +19,13 @@ class Receiver extends KeypadPeer {
     this.peer.on("close", this.onPeerClose);
     this.peer.on("error", this.onPeerError);
   }
+
+  reconnect = () => {
+    this.peer.id = this.lastPeerId;
+    this.peer._lastServerId = this.lastPeerId;
+    this.peer.reconnect();
+  }
+
   updateAlphabet = (alphabet) => {
     // Get an array of unique symbols
     const validAlphabet = this.checkAlphabet(alphabet);
@@ -77,7 +84,7 @@ class Receiver extends KeypadPeer {
     return keypadParameters;
   };
   #onPeerOpen = (id) => {
-    // Workaround for peer.reconnect deleting previous id
+    // Workaround for peer. ect deleting previous id
     if (this.id === null) {
       this.displayUpdate("Received null id from peer open"); // DEBUG
       this.peer.id = this.lastPeerId;
