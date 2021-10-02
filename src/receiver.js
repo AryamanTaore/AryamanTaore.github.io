@@ -20,11 +20,11 @@ class Receiver extends KeypadPeer {
     this.peer.on("error", this.onPeerError);
   }
 
-  reconnect = () => {
-    this.peer.id = this.lastPeerId;
-    this.peer._lastServerId = this.lastPeerId;
-    this.peer.reconnect();
-  }
+  // reconnect = () => {
+  //   this.peer.id = this.lastPeerId;
+  //   this.peer._lastServerId = this.lastPeerId;
+  //   this.peer.reconnect();
+  // }
 
   updateAlphabet = (alphabet) => {
     // Get an array of unique symbols
