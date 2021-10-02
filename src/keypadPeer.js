@@ -11,7 +11,7 @@ const pressFeedbackURI =
 export class KeypadPeer {
   constructor(
     parameters = {
-      keypadUrl: "https://www.keypad.website/keypad?",
+      keypadUrl: "https://aryamantaore.github.io/dist/keypad?",
       targetElementId: null,
     }
   ) {
@@ -21,7 +21,7 @@ export class KeypadPeer {
     this.lastPeerId = null;
     this.keypadUrl = parameters.hasOwnProperty("keypadUrl")
       ? parameters.keypadUrl
-      : "https://www.keypad.website/keypad?";
+      : "https://aryamantaore.github.io/dist/keypad?";
     this.targetElement = parameters.hasOwnProperty("targetElementId")
       ? parameters.targetElementId
       : null;
